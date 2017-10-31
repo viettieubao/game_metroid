@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="FrameWork">
+      <UniqueIdentifier>{f75a9197-0d6a-484f-a3f0-b48f2cdfda0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FrameWork\Audio">
+      <UniqueIdentifier>{ab2196d2-8fd7-41e0-b25a-58bca743adcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FrameWork\Camera">
+      <UniqueIdentifier>{a61c1de5-7bb1-4893-a3fc-4c0ea39e2221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FrameWork\Background">
+      <UniqueIdentifier>{68cf7e1f-7e25-4c6d-9af3-5c850f3dc132}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Winmain">
+      <UniqueIdentifier>{2f649342-6ed9-4bd5-858f-7b74c9916d79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SceneGame">
+      <UniqueIdentifier>{952ef1dc-50f0-409c-a5d9-03a1261af294}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{950e79f2-77eb-4e69-a9b6-1367fd4da57f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\samus">
+      <UniqueIdentifier>{da9068b1-46be-45ed-a75e-a0f70c3a9829}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CSprite.cpp">
+      <Filter>FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="CText.cpp">
+      <Filter>FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="CTexture.cpp">
+      <Filter>FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="CCamera.cpp">
+      <Filter>FrameWork\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CBackground.cpp">
+      <Filter>FrameWork\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>FrameWork\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="Global.cpp">
+      <Filter>FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Winmain</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>SceneGame</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMain.cpp">
+      <Filter>SceneGame</Filter>
+    </ClCompile>
+    <ClCompile Include="CSamus.cpp">
+      <Filter>Object\samus</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CSprite.h">
+      <Filter>FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="CText.h">
+      <Filter>FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="CTexture.h">
+      <Filter>FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="CCamera.h">
+      <Filter>FrameWork\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CBackground.h">
+      <Filter>FrameWork\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>FrameWork\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.h">
+      <Filter>FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>SceneGame</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMain.h">
+      <Filter>SceneGame</Filter>
+    </ClInclude>
+    <ClInclude Include="CSamus.h">
+      <Filter>Object\samus</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
