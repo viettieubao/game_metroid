@@ -5,6 +5,7 @@
 #include "CBackground.h"
 #include "CCamera.h"
 #include "CSamus.h"
+#include "CText.h"
 
 
 class SceneMain: public CGame
@@ -17,6 +18,7 @@ protected:
 	CSamus *samus;
 	CBackground *BG;
 	CCamera *camera;
+	CText *text;
 
 	virtual void RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int t);
 	virtual void ProcessInput(LPDIRECT3DDEVICE9 d3ddv, int Delta);

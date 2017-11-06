@@ -7,52 +7,85 @@ CBackground::CBackground()
 	listtile = NULL;
 }
 
+bool IsNumber(char c)
+{
+	if (c >= '0' && c <= '9')
+		return true;
+	return false;
+}
 CBackground::CBackground(int level) {
 	string filename;
 	switch (level)
 	{
 	case 1:
-		filename = "Resources\\Maps\\stage1\\Stage1_Map.txt";
+	{
+		filename = "Resources\\Maps\\Stage1\\Stage1_Map.txt";
+		colmap = 160;
+		rowmap = 15;
+		
+	}
 		break;
 	default:
 		break;
 	}
-	ifstream map(filename);
-	if (map.is_open()) {
-		int posX, posY;
-		int value;
-		int col, row; //file cat
-		int colmap, rowmap;//file map
-		map >> col>>row;
-		map >> colmap >> rowmap;
-		if (level == 1) {
-			bg_tt = new CTexture("Resources\\Maps\\stage1\\Stage1.png", col, row, col*row);
-			bg_sp = new CSprite(bg_tt, 1000);
+	fstream f;
+	f.open(filename, ios::in);
+	string line;
+	string strtemp = "";
+	getline(f, line);
+	int temp[2];  
+	for (int i = 0; i < line.length(); i++) {
+		if (line[i] != '\t' && IsNumber(line[i])) {
+			strtemp += line[i];
 		}
-		int id = 0;
-		listtile = new std::map<int, Tile*>();
-		Tile* obj;
-		for (int i = colmap - 1; i > 0; i--) { //cot
-			for (int j = 0; j < rowmap; j++)//hang
-			{
-				map >> value;
-				posX = (j * 32); 
-				posY = i * 32;
-				id = i*colmap + j;
-				Tile *tile = new Tile(value, posX, posY);
-				listtile->insert(pair<int, Tile*>(id, tile));
+		else {
+			if (IsNumber(strtemp[0])) {
+				coltile = atoi(strtemp.c_str());
+				strtemp = "";
 			}
-
 		}
-		map.close();
+		if (i == line.length() - 1) {
+			rowtile = atoi(strtemp.c_str());
+		}
 	}
+	bg_tt = new CTexture("Resources\\Maps\\Stage1\\Stage1.png", coltile, rowtile, coltile*rowtile);
+	bg_sp = new CSprite(bg_tt, 1000);
+	getline(f, line);
+	listtile = new std::map<int, Tile*>();
+	int j = 14;// row index
+	int id = 0; // id index listtile
+	while (!f.eof()) {
+		strtemp = "";
+		getline(f, line);
+		//if (line == "") break;
+		int temp = 0;
+		for (int i = 0; i < line.length(); i++) {
+			if (line[i] != '\t') {
+				strtemp += line[i];
+			}
+			else {
+				int idtile = atoi(strtemp.c_str());
+				int posX = temp * 32 ;
+				int posY = j * 32;
+				Tile *tile = new Tile(idtile, posX, posY);
+				listtile->insert(pair<int, Tile*>(id, tile));
+				temp++;
+				strtemp = "";
+				id++;
+			}
+		}
+		j--;
+	}
+
+	f.close();
+
 }
 void CBackground::Draw(CCamera *camera) {
 	map<int, Tile*>::iterator begin;
 	for (begin = listtile->begin(); begin != listtile->end(); begin++) {
 		Tile * obj = begin->second;
 		D3DXVECTOR2 t = camera->Transform(obj->posX, obj->posY);
-		bg_sp->DrawIndex(obj->ID, t.x, t.y);
+		bg_sp->DrawIndex(obj->ID,t.x, t.y);
 	}
 }
 

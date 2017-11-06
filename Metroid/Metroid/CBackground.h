@@ -15,6 +15,10 @@ using namespace std;
 
 class CBackground
 {
+	int coltile; //so cot cua file tile .png
+	int rowtile;
+	int colmap;//so cot cua ma tran map
+	int rowmap;
 public:
 	CTexture *bg_tt;
 	CSprite *bg_sp;

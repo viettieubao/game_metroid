@@ -10,10 +10,10 @@ CSamus::CSamus()
 CSamus::CSamus(float x, float y)
 {
 	this->samusTexture = new CTexture(SAMUS_FILE, 3, 1, 3);
-	this->samusSprite = new CSprite(this->samusTexture,0);
+	this->samusSprite = new CSprite(this->samusTexture,60);
 	this->posX = x;
 	this->posY = y;
-	this->vx = 0;
+	this->vx = 8;
 	this->vy = 0;
 	isturnleft = false;
 }
