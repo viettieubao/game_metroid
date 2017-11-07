@@ -20,26 +20,24 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CBackground.cpp" />
-    <ClCompile Include="CCamera.cpp" />
     <ClCompile Include="CSamus.cpp" />
-    <ClCompile Include="CSprite.cpp" />
-    <ClCompile Include="CText.cpp" />
-    <ClCompile Include="CTexture.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GCamera.cpp" />
     <ClCompile Include="Global.cpp" />
+    <ClCompile Include="GSprite.cpp" />
+    <ClCompile Include="GTexture.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="Tile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CBackground.h" />
-    <ClInclude Include="CCamera.h" />
     <ClInclude Include="CSamus.h" />
-    <ClInclude Include="CSprite.h" />
-    <ClInclude Include="CText.h" />
-    <ClInclude Include="CTexture.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GCamera.h" />
     <ClInclude Include="Global.h" />
+    <ClInclude Include="GSprite.h" />
+    <ClInclude Include="GTexture.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="Tile.h" />
   </ItemGroup>

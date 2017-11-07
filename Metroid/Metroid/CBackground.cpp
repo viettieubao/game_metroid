@@ -48,8 +48,8 @@ CBackground::CBackground(int level) {
 			rowtile = atoi(strtemp.c_str());
 		}
 	}
-	bg_tt = new CTexture("Resources\\Maps\\Stage1\\Stage1.png", coltile, rowtile, coltile*rowtile);
-	bg_sp = new CSprite(bg_tt, 1000);
+	bg_tt = new GTexture("Resources\\Maps\\Stage1\\Stage1.png", coltile, rowtile, coltile*rowtile);
+	bg_sp = new GSprite(bg_tt, 1000);
 	getline(f, line);
 	listtile = new std::map<int, Tile*>();
 	int j = 14;// row index
@@ -80,7 +80,7 @@ CBackground::CBackground(int level) {
 	f.close();
 
 }
-void CBackground::Draw(CCamera *camera) {
+void CBackground::Draw(GCamera *camera) {
 	map<int, Tile*>::iterator begin;
 	for (begin = listtile->begin(); begin != listtile->end(); begin++) {
 		Tile * obj = begin->second;
@@ -88,6 +88,8 @@ void CBackground::Draw(CCamera *camera) {
 		bg_sp->DrawIndex(obj->ID,t.x, t.y);
 	}
 }
+
+
 
 CBackground::~CBackground(void)
 {

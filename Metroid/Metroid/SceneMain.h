@@ -3,7 +3,7 @@
 
 #include "Game.h"
 #include "CBackground.h"
-#include "CCamera.h"
+#include "GCamera.h"
 #include "CSamus.h"
 #include "CText.h"
 
@@ -17,7 +17,7 @@ public:
 protected:	
 	CSamus *samus;
 	CBackground *BG;
-	CCamera *camera;
+	GCamera *camera;
 	CText *text;
 
 	virtual void RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int t);

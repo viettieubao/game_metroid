@@ -9,8 +9,8 @@ CSamus::CSamus()
 }
 CSamus::CSamus(float x, float y)
 {
-	this->samusTexture = new CTexture(SAMUS_FILE, 3, 1, 3);
-	this->samusSprite = new CSprite(this->samusTexture,60);
+	this->samusTexture = new GTexture(SAMUS_FILE, 3, 1, 3);
+	this->samusSprite = new GSprite(this->samusTexture,60);
 	this->posX = x;
 	this->posY = y;
 	this->vx = 8;
@@ -25,7 +25,7 @@ void CSamus::Update(int detatime) {
 	else
 		this->posX -= vx;
 }
-void CSamus::Draw(CCamera *camera) {
+void CSamus::Draw(GCamera *camera) {
 	D3DXVECTOR2 pos = camera->Transform(this->posX, this->posY);
 	if (!isturnleft)
 		this->samusSprite->Draw(pos.x, pos.y);

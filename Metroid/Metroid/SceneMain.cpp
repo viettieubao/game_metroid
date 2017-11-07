@@ -23,14 +23,14 @@ void SceneMain::ProcessInput(LPDIRECT3DDEVICE9 d3ddv, int Delta)
 {
 	if (IsKeyDown(DIK_RIGHT))
 	{
-		//samus->isturnleft = false;
-		camera->viewport.x += 10;
+		//samus->isturnleft = false; n
+		camera->UpdateCamera(20);
 	}
 	else
 		if (IsKeyDown(DIK_LEFT))
 		{
 			//samus->isturnleft = true;
-			camera->viewport.x -= 10;
+			//camera->viewport.x -= 10;
 		}
 }
 
@@ -39,7 +39,7 @@ void SceneMain::ProcessInput(LPDIRECT3DDEVICE9 d3ddv, int Delta)
 void SceneMain::LoadResources(LPDIRECT3DDEVICE9 d3ddv)
 {
 	//load background
-	camera = new CCamera();
+	camera = new GCamera();
 	BG = new CBackground(1);
 	camera->viewport.x = 1023;//1023
 	camera->viewport.y = 480;//480

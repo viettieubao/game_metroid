@@ -3,14 +3,14 @@
 
 #include <map>
 #include <list>
-#include "CSprite.h"
-#include "CTexture.h"
+#include "GSprite.h"
+#include "GTexture.h"
 #include "Tile.h"
 #include <string>
 #include <sstream>
 #include <fstream>
 #include <iostream>
-#include "CCamera.h"
+#include "GCamera.h"
 using namespace std;
 
 class CBackground
@@ -20,12 +20,13 @@ class CBackground
 	int colmap;//so cot cua ma tran map
 	int rowmap;
 public:
-	CTexture *bg_tt;
-	CSprite *bg_sp;
+	GTexture *bg_tt;
+	GSprite *bg_sp;
 	map<int, Tile*> *listtile;
 	CBackground(void);
 	CBackground(int);
-	void Draw(CCamera *);
+	void Draw(GCamera *);
+	void DrawMap2(LPDIRECT3DDEVICE9 d3ddv, GCamera* camera);
 	~CBackground();
 };
 

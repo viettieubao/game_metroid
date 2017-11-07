@@ -1,7 +1,7 @@
 #pragma once
-#include "CTexture.h"
-#include "CSprite.h"
-#include "CCamera.h"
+#include "GTexture.h"
+#include "GSprite.h"
+#include "GCamera.h"
 #include <dinput.h>
 class CSamus
 {
@@ -10,12 +10,12 @@ public:
 	float vx, vy;
 	float standWidth = 16;
 	float standHeight = 40;
-	CSprite *samusSprite;
-	CTexture *samusTexture;
+	GSprite *samusSprite;
+	GTexture *samusTexture;
 	bool isturnleft;
 
 	void Update(int detatime);
-	void Draw(CCamera*);
+	void Draw(GCamera*);
 	CSamus();
 	CSamus(float,float);
 	~CSamus();
