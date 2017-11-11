@@ -3,19 +3,19 @@
 #include "GSprite.h"
 #include "GCamera.h"
 #include <dinput.h>
-class CSamus
+#include "Object.h"
+class CSamus :public Object
 {
 public:
-	float posX, posY;
-	float vx, vy;
-	float standWidth = 16;
-	float standHeight = 40;
-	GSprite *samusSprite;
-	GTexture *samusTexture;
-	bool isturnleft;
-
-	void Update(int detatime);
+	void Update(int t, GCamera * camera);
 	void Draw(GCamera*);
+
+	void Run(int t, GCamera* camera);
+	void Sit();
+	void StandUp();
+	void Jump();
+	void Fall();
+
 	CSamus();
 	CSamus(float,float);
 	~CSamus();

@@ -27,6 +27,7 @@
     <ClCompile Include="GSprite.cpp" />
     <ClCompile Include="GTexture.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Object.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="Tile.cpp" />
   </ItemGroup>
@@ -38,6 +39,7 @@
     <ClInclude Include="Global.h" />
     <ClInclude Include="GSprite.h" />
     <ClInclude Include="GTexture.h" />
+    <ClInclude Include="Object.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="Tile.h" />
   </ItemGroup>

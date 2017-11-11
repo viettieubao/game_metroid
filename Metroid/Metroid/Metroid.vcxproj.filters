@@ -57,6 +57,7 @@
     <ClCompile Include="GTexture.cpp">
       <Filter>FrameWork</Filter>
     </ClCompile>
+    <ClCompile Include="Object.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CBackground.h">
@@ -86,5 +87,6 @@
     <ClInclude Include="GSprite.h">
       <Filter>FrameWork</Filter>
     </ClInclude>
+    <ClInclude Include="Object.h" />
   </ItemGroup>
 </Project>

@@ -14,6 +14,7 @@ bool IsNumber(char c)
 	return false;
 }
 CBackground::CBackground(int level) {
+	this->level = level;
 	string filename;
 	switch (level)
 	{
@@ -81,12 +82,22 @@ CBackground::CBackground(int level) {
 
 }
 void CBackground::Draw(GCamera *camera) {
+	
 	map<int, Tile*>::iterator begin;
 	for (begin = listtile->begin(); begin != listtile->end(); begin++) {
 		Tile * obj = begin->second;
 		D3DXVECTOR2 t = camera->Transform(obj->posX, obj->posY);
 		bg_sp->DrawIndex(obj->ID,t.x, t.y);
 	}
+	/*map<int, Tile*>::iterator begin;
+	if (level == 1) {
+		int x = -(int(camera->viewport.x));
+		int y = -(int(camera->viewport.y));
+		for (begin = listtile->begin(); begin != listtile->end(); begin++) {
+			Tile * obj = begin->second;
+			D3DXVECTOR2 t = camera->Transform(obj->posX, obj->posY);
+			bg_sp->DrawIndex(obj->ID, t.x, t.y);
+	}*/
 }
 
 

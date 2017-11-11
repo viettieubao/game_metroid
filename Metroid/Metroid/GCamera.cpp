@@ -33,9 +33,9 @@ D3DXVECTOR3 GCamera::CenterSprite(int x, int y)
 	return pCenter;
 }
 
-void GCamera::UpdateCamera(int x)
+void GCamera::UpdateCamera(FLOAT x)
 {
-	
+	viewport.x += x;
 }
 
 void GCamera::UpdateCamera(float w, float h, float speed)

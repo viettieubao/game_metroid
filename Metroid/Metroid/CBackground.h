@@ -19,6 +19,7 @@ class CBackground
 	int rowtile;
 	int colmap;//so cot cua ma tran map
 	int rowmap;
+	int level;
 public:
 	GTexture *bg_tt;
 	GSprite *bg_sp;
