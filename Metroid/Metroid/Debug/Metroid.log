@@ -1,7 +1,7 @@
 ﻿  CSamus.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-c:\users\viet\documents\github\game_metroid\metroid\metroid\csamus.cpp(107): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\viet\documents\github\game_metroid\metroid\metroid\csamus.cpp(108): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
-c:\users\viet\documents\github\game_metroid\metroid\metroid\csamus.cpp(109): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+c:\users\viet\documents\github\game_metroid\metroid\metroid\csamus.cpp(136): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\viet\documents\github\game_metroid\metroid\metroid\csamus.cpp(137): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+c:\users\viet\documents\github\game_metroid\metroid\metroid\csamus.cpp(138): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
   Metroid.vcxproj -> C:\Users\Viet\Documents\GitHub\game_metroid\Metroid\Debug\Metroid.exe
   Metroid.vcxproj -> C:\Users\Viet\Documents\GitHub\game_metroid\Metroid\Debug\Metroid.pdb (Partial PDB)

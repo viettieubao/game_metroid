@@ -197,3 +197,4 @@ void GSprite::DrawFromTL(int X, int Y)
 		0xFFFFFFFF //color
 	);
 }
+

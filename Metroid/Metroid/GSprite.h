@@ -6,6 +6,8 @@
 
 #include "GTexture.h"
 
+
+
 class GSprite {
 public: 
 	GTexture* _texture;
@@ -44,6 +46,7 @@ public:
 
 	//Render Rect of texture at (x,y)
 	void DrawRect(int X, int Y, RECT SrcRect);
+
 
 	void DrawIndex(int index, int X, int Y);
 

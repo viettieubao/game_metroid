@@ -27,7 +27,6 @@ public:
 	CBackground(void);
 	CBackground(int);
 	void Draw(GCamera *);
-	void DrawMap2(LPDIRECT3DDEVICE9 d3ddv, GCamera* camera);
 	~CBackground();
 };
 

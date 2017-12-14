@@ -23,7 +23,7 @@ Object::~Object()
 }
 
 void Object::MoveLeft() {
-	if (isJumping = 0) {
+	if (isJumping == 1) {
 		isMoving = 0;
 		return;
 	}
@@ -54,20 +54,22 @@ void Object::Move() {
 		this->MoveRight();
 }
 
-void Object::Sit() {
-	if (isJumping) return;
-	this->isSitting = 1;
-	this->Status = 2;
+void Object::Roll() {
+	if (this->Status == 2) {
+		this->isRoll = 1;
+	}
+	else {
+		this->isRoll = 0;
+	}
+
 }
 
 void Object::Jump() {
-	if (isSitting) return;
 	isJumping = 1;
 	Status = 3;
 }
 
 void Object::StandUp() {
-	this->isSitting = 0;
 	Status = 1;
 }
 

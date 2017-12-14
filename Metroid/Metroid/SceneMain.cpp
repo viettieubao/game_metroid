@@ -10,6 +10,7 @@ SceneMain::SceneMain(int _nCmdShow): CGame(_nCmdShow)
 void SceneMain::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int t)
 {
 	samus->Update(t, camera);
+	camera->viewport.x = samus->fX-255;
 
 	G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
 
@@ -21,27 +22,19 @@ void SceneMain::RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int t)
 
 void SceneMain::ProcessInput(LPDIRECT3DDEVICE9 d3ddv, int Delta)
 {
+	
 	if (IsKeyDown(DIK_LEFT)) {
-		if (IsKeyDown(DIK_DOWN)) {
-			if (samus->getattacking() == 0) {
-				samus->Sit();
-				samus->Stop();
-				return;
-			}
-		}
-		else
-		{
+		
 			camera->CenterSprite(samus->getx(), samus->gety());
 			camera->UpdateCamera(samus->getx(), samus->gety(), -Delta*samus->getx());
 			samus->MoveLeft();
-			samus->StandUp();
+			/*samus->StandUp();*/
 			return;
-		}
+
 	}
 	if (IsKeyDown(DIK_RIGHT)) {
 		if (IsKeyDown(DIK_DOWN)) {
 			if (samus->getattacking() == 0) {
-				samus->Sit();
 				samus->Stop();
 				return;
 			}
@@ -51,13 +44,7 @@ void SceneMain::ProcessInput(LPDIRECT3DDEVICE9 d3ddv, int Delta)
 			camera->CenterSprite(samus->getx(), samus->gety());
 			camera->UpdateCamera(samus->getx(), samus->gety(), -Delta*samus->getx());
 			samus->MoveRight();
-			samus->StandUp();
-			return;
-		}
-	}
-	if (IsKeyDown(DIK_DOWN)) {
-		if (samus->getattacking() == 0) {
-			samus->Sit();
+			/*samus->StandUp();*/
 			return;
 		}
 	}
@@ -76,21 +63,29 @@ void SceneMain::LoadResources(LPDIRECT3DDEVICE9 d3ddv)
 	BG = new CBackground(1);
 	camera->viewport.x = 1023;//1023
 	camera->viewport.y = 470;//480
-	samus = new CSamus(1264,129);
+	samus = new CSamus(1264,113);
 	
 }
 
 void SceneMain::OnKeyDown(int KeyCode)
 {
 	switch (KeyCode)
-	{case DIK_UP:
-		if (samus->getattacking() == 0) {
+	{case DIK_X:
+		if (samus->getattacking()==0)
 			samus->Jump();
 			break;
-		}
+	case DIK_DOWN:
+		samus->setrolling(1);
+		samus->Roll();
+		samus->StandUp();
+		break;
+	case DIK_UP:
+		samus->setrolling(0);
+		break;
 	default:
 		break;
 	}
+
 }
 
 

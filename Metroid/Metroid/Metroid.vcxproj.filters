@@ -25,6 +25,9 @@
     <Filter Include="Object\samus">
       <UniqueIdentifier>{da9068b1-46be-45ed-a75e-a0f70c3a9829}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Enemy">
+      <UniqueIdentifier>{86195354-4203-4ca4-8e4e-dfa70d8bca43}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CBackground.cpp">
@@ -57,7 +60,13 @@
     <ClCompile Include="GTexture.cpp">
       <Filter>FrameWork</Filter>
     </ClCompile>
-    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Object.cpp">
+      <Filter>Object\samus</Filter>
+    </ClCompile>
+    <ClCompile Include="Box.cpp" />
+    <ClCompile Include="ObjectEnemy.cpp">
+      <Filter>Object\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CBackground.h">
@@ -87,6 +96,12 @@
     <ClInclude Include="GSprite.h">
       <Filter>FrameWork</Filter>
     </ClInclude>
-    <ClInclude Include="Object.h" />
+    <ClInclude Include="Object.h">
+      <Filter>Object\samus</Filter>
+    </ClInclude>
+    <ClInclude Include="Box.h" />
+    <ClInclude Include="ObjectEnemy.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

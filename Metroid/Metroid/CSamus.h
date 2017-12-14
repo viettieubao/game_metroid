@@ -11,7 +11,7 @@ public:
 	void Draw(GCamera*);
 
 	void Run(int t, GCamera* camera);
-	void Sit();
+	void Roll();
 	void StandUp();
 	void Jump();
 	void Fall();

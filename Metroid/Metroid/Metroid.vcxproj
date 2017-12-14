@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Box.cpp" />
     <ClCompile Include="CBackground.cpp" />
     <ClCompile Include="CSamus.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -28,10 +29,12 @@
     <ClCompile Include="GTexture.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Object.cpp" />
+    <ClCompile Include="ObjectEnemy.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="Tile.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Box.h" />
     <ClInclude Include="CBackground.h" />
     <ClInclude Include="CSamus.h" />
     <ClInclude Include="Game.h" />
@@ -40,6 +43,7 @@
     <ClInclude Include="GSprite.h" />
     <ClInclude Include="GTexture.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="ObjectEnemy.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="Tile.h" />
   </ItemGroup>

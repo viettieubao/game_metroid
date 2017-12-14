@@ -16,12 +16,12 @@ public:
 
 	int iState; // huong cua nhan vat 1 la ben trai 0 la ben phai;
 	int isMoving;// dung yen =0, di chuyen =1
-	int isSitting; // dung = 0 ngoi =1;
+	int isRoll; // đứng = 0 lăn =1;
 	int isJumping; // nhay =1;
 	int iJump; // he so nhay
 	int isFalling; //roi
 
-	int Status; //nhan biet trang thai dung ngoi nhay : đứng =1; ngồi =2, nhảy bằng 3
+	int Status; //nhan biet trang thai dung ngoi nhay : đứng =1; lăn =2, nhảy bằng 3
 	int isAttack; // danh =0 , khong danh =1;
 	GTexture *GTObj;
 	GSprite *GSObj;
@@ -38,7 +38,7 @@ public:
 	float getspeed() { return this->fSpeed; }
 	int getstate() { return this->iState; }
 	int getmoving() { return this->isMoving; }
-	int getsitting() { return this->isSitting; }
+	int getrolling() { return this->isRoll; }
 	int getattacking() { return this->isAttack; }
 
 	void setx(float x1) { this->fX = x1; };
@@ -50,7 +50,7 @@ public:
 	void setspeed(float x1) { this->fSpeed = x1; };
 	void setstate(int x1) { this->iState = x1; };
 	void setmoving(int x1) { this->isMoving = x1; }
-	void setsitting(int x1) { this->isSitting = x1; }
+	void setrolling(int x1) { this->isRoll = x1; }
 	
 	void MoveLeft();
 	void MoveRight();
@@ -61,6 +61,7 @@ public:
 	void Attack();
 	void Jump();
 	void Fall();
+	void Roll();
 
 	virtual void Update(int t) {};
 	virtual void Draw(GCamera *camera) {};
