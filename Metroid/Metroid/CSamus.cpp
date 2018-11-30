@@ -6,7 +6,7 @@
 CSamus::CSamus():Object()
 {
 	GTObj = new GTexture(SAMUS_FILE, 3, 1, 3);
-	GSObj = new GSprite(GTObj, 50);
+	GSObj = new GSprite(GTObj, 25);
 	fX = 0;
 	fY = 0;
 	this->fVx = 3;
@@ -27,7 +27,7 @@ CSamus::CSamus(float x =0, float y =0)
 	isMoving = 0;
 	isFalling = 0;
 	GTObj = new GTexture(SAMUS_FILE, 24, 1, 24);
-	GSObj = new GSprite(GTObj, 50);  
+	GSObj = new GSprite(GTObj, 25);  
 }
 
 void CSamus::Run(int t,GCamera *camera) {
@@ -51,7 +51,7 @@ void CSamus::Run(int t,GCamera *camera) {
 		}
 		if (iState == 1) {
 			this->fX = this->fX + 8;
-		}
+		}else
 		if (iState == -1) {
 			this->fX = this->fX - 8;
 		}
@@ -60,15 +60,20 @@ void CSamus::Run(int t,GCamera *camera) {
 void CSamus::Roll() {
 	Object::Roll();
 	//khi đứng 1 chỗ trạng thái lắn
-	if (isRoll == 1&& this->isMoving==0) {
+	if (isRoll == 1) {
 		this->GSObj->_start = 5;
 		this->GSObj->_end = 8;
 		this->GSObj->Update(this->GSObj->_timeAni);
-	}
+	}else
 	// nhảy cuộn tròn 
 	if (this->isRoll == 1 && this->isMoving == 1 && this->isJumping==1) {
 		this->GSObj->_start = 1;
 		this->GSObj->_end = 4;
+	}
+	//lăn bình thường
+	else if (this->isRoll == 1 && this->isMoving == 1 && this->isJumping == 0) {
+		this->GSObj->_start = 5;
+		this->GSObj->_end = 8;
 	}
 }
 
@@ -135,6 +140,7 @@ void CSamus::Draw(GCamera *camera) {
 	D3DXVECTOR2 pos = camera->Transform(this->fX, this->fY);
 	if (getstate() == 1) GSObj->Draw(pos.x, pos.y); //di qua phai
 	if (getstate() == -1) GSObj->DrawFlipX(pos.x, pos.y); // di qua trai
+	cout << this->getx() << " " << this->gety() << endl;
 }
 CSamus::~CSamus()
 {

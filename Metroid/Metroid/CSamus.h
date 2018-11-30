@@ -4,6 +4,8 @@
 #include "GCamera.h"
 #include <dinput.h>
 #include "Object.h"
+#include <iostream>
+using namespace std;
 class CSamus :public Object
 {
 public:

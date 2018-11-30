@@ -15,7 +15,7 @@ public:
 	float fSpeed;					//Tốc độ di chuyển của đối tượng
 
 	int iState; // huong cua nhan vat 1 la ben trai 0 la ben phai;
-	int isMoving;// dung yen =0, di chuyen =1
+	int isMoving;// dung yen =0, di chuyen: 1
 	int isRoll; // đứng = 0 lăn =1;
 	int isJumping; // nhay =1;
 	int iJump; // he so nhay
@@ -51,12 +51,12 @@ public:
 	void setstate(int x1) { this->iState = x1; };
 	void setmoving(int x1) { this->isMoving = x1; }
 	void setrolling(int x1) { this->isRoll = x1; }
+	void setStatus(int x1) { this->Status = x1; }
 	
 	void MoveLeft();
 	void MoveRight();
 	void Move();
 	void Stop();
-	void Sit();
 	void StandUp();
 	void Attack();
 	void Jump();

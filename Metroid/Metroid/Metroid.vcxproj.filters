@@ -67,6 +67,10 @@
     <ClCompile Include="ObjectEnemy.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Object\samus</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CBackground.h">
@@ -102,6 +106,13 @@
     <ClInclude Include="Box.h" />
     <ClInclude Include="ObjectEnemy.h">
       <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Object\samus</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Enum.h">
+      <Filter>Object</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

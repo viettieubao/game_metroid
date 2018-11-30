@@ -18,7 +18,7 @@ int G_NextForm;
 
 bool		G_IsInitedDX = false;
 int			G_GameDepth;
-char*		G_GameName = "Castle Vania";
+char*		G_GameName = "Metroid";
 int			G_FrameRate = 60;
 int			G_ColorMode;
 bool		G_IsFullScreen = false;

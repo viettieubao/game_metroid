@@ -18,6 +18,7 @@ class CBackground
 	int coltile; //so cot cua file tile .png
 	int rowtile;
 	int colmap;//so cot cua ma tran map
+	int tilecount;
 	int rowmap;
 	int level;
 public:

@@ -49,9 +49,12 @@ void Object::Stop() {
 
 }
 void Object::Move() {
-	if (iState == -1) this->MoveLeft();
-	else
-		this->MoveRight();
+	if (this->isMoving == 1)
+	{
+		if (iState == -1) this->MoveLeft();
+		else
+			this->MoveRight();
+	}
 }
 
 void Object::Roll() {

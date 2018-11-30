@@ -231,6 +231,9 @@ void CGame::GameRun()
 			frame_start = now;
 			RenderFrame();
 		}
+		else {
+			Sleep(tick_per_frame - _DeltaTime);
+		}
 
 		ProcessKeyBoard();
 
